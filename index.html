@@ -1,51 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+
   <title>Frontend Mentor | Notifications page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- GOOGLE FONTS API -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS STYLESHEET -->
+  <link rel="stylesheet" href="src/styles/style.css">
 </head>
+
 <body>
 
-  Notifications 3
+  <section class="notif">
+    <div class="notif__header">
+      <h3 class="notif__header__title">
+        Notifications <span class="notif__header__title__span">3</span>
+      </h3>
 
-  Mark all as read
+      <button class="btn btn--mark">Mark all as read</button>
+    </div>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
 
-  Angela Gray followed you
-  5m ago
+    <section class="notif__container">
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+      <div class="notif__item unread">
+        <!-- <figure class="notif__item__img-wrapper"> -->
+        <img src="src/assets/avatar-mark-webber.webp" alt="" class="notif__item__img">
+        <!-- </figure> -->
+        <section class="notif__item__content">
+          <p class="notif__item__content__par">
+            <strong class="name">Mark Webber</strong> reacted to your recent post <strong class="post"> My first
+              tournament today! </strong>
+            <span class="unread-span no-display"></span>
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
+          </p>
+          <span class="notif__item__content__timestamp">
 
-  Kimberly Smith commented on your picture
-  1 week ago
+            1m ago
+          </span>
+        </section>
+      </div>
 
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
 
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="notif__item unread">
+        <!-- <figure class="notif__item__img-wrapper"> -->
+        <img src="src/assets/avatar-angela-gray.webp" alt="" class="notif__item__img">
+        <!-- </figure> -->
+        <section class="notif__item__content">
+          <p class="notif__item__content__par">
+            <strong class="name">Angela Gray</strong> followed you
+
+            <span class="unread-span no-display"></span>
+
+          </p>
+          <span class="notif__item__content__timestamp">
+            5m ago
+
+          </span>
+        </section>
+      </div>
+
+
+      <div class="notif__item unread">
+        <!-- <figure class="notif__item__img-wrapper"> -->
+        <img src="src/assets/avatar-jacob-thompson.webp" alt="" class="notif__item__img">
+        <!-- </figure> -->
+        <section class="notif__item__content">
+          <p class="notif__item__content__par">
+            <strong class="name">Jacob Thompson</strong> has joined your group <strong class="group">Chess Club</strong>
+            <span class="unread-span no-display"></span>
+
+          </p>
+          <span class="notif__item__content__timestamp">
+            1 day ago
+
+          </span>
+        </section>
+      </div>
+
+
+      <div class="notif__item">
+        <!-- <figure class="notif__item__img-wrapper"> -->
+        <img src="src/assets/avatar-rizky-hasanuddin.webp" alt="" class="notif__item__img">
+        <!-- </figure> -->
+        <section class="notif__item__content">
+          <div class=" notif__item__content__details">
+            <p class="notif__item__content__par">
+              <strong class="name">Rizky Hasanuddin</strong> sent you a private message
+              <span class="unread-span no-display"></span>
+
+            </p>
+            <span class="notif__item__content__timestamp">
+              5 days ago
+            </span>
+          </div>
+
+          <div class="notif__item__content__message">
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+            I'm already having lots of fun and improving my game.
+
+          </div>
+        </section>
+      </div>
+
+
+      <div class="notif__item">
+        <!-- <figure class="notif__item__img-wrapper"> -->
+        <img src="src/assets/avatar-kimberly-smith.webp" alt="" class="notif__item__img">
+        <!-- </figure> -->
+        <section class="notif__item__content">
+          <div class=" notif__item__content__details">
+
+            <p class="notif__item__content__par">
+              <strong class="name">Kimberly Smith</strong> commented on your picture
+
+              <span class="unread-span no-display"></span>
+            </p>
+            <span class="notif__item__content__timestamp">
+              1 week ago
+
+            </span>
+          </div>
+
+        </section>
+
+        <img src="src/assets/image-chess.webp" alt="" class="notif__item__img img--post">
+      </div>
+
+
+      <div class="notif__item">
+        <!-- <figure class="notif__item__img-wrapper"> -->
+        <img src="src/assets/avatar-nathan-peterson.webp" alt="" class="notif__item__img">
+        <!-- </figure> -->
+        <section class="notif__item__content">
+          <p class="notif__item__content__par">
+            <strong class="name">Nathan Peterson</strong> reacted to your recent post <strong class="post">5 end-game
+              strategies to increase your
+              win rate</strong>
+            <span class="unread-span no-display"></span>
+
+          </p>
+          <span class="notif__item__content__timestamp">
+
+            2 weeks ago
+          </span>
+        </section>
+      </div>
+
+
+      <div class="notif__item">
+        <!-- <figure class="notif__item__img-wrapper"> -->
+        <img src="src/assets/avatar-anna-kim.webp" alt="" class="notif__item__img">
+        <!-- </figure> -->
+        <section class="notif__item__content">
+          <p class="notif__item__content__par">
+            <strong class="name">Anna Kim</strong> left the group <strong class="group">Chess Club</strong>
+
+            <span class="unread-span no-display"></span>
+
+          </p>
+          <span class="notif__item__content__timestamp">
+            2 weeks ago
+
+
+          </span>
+        </section>
+      </div>
+
+    </section>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <script type="module" src="src/script.js"></script>
 </body>
+
 </html>
